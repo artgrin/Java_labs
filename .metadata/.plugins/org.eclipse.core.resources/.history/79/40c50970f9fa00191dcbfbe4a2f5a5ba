@@ -1,0 +1,20 @@
+package lab3;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+import com.google.gson.*;
+
+public class Program {
+	public static void main(String[] args) {
+        
+		Scanner in = new Scanner(System.in);
+    	Gson gson = new Gson();
+		
+        ArrayList<Book> books = new ArrayList<>();
+        books.add(new Book());
+        System.out.println(gson.toJson(books.get(0)));
+        
+        
+        in.close();
+    }
+}

@@ -1,0 +1,70 @@
+package lab3;
+
+import java.util.Scanner;
+import java.io.*;
+import java.util.ArrayList;
+import java.util.Comparator;
+import com.google.gson.*;
+
+
+public class Program {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Gson gson = new Gson();
+        int selector = 0;
+        String s ="";
+        
+        ArrayList<Book> books = new ArrayList<>();
+ 
+        while (!"5".equals(s)) {
+        	System.out.print("0 - Прочитати список книг із файла\n"
+    				+ "1 - Отримати список книг зазначеного автора\n"
+    				+ "2 - Отримати список книг, які видані зазначеним видавництвом\n"
+    				+ "3 - Отримати список книг, виданих пізніше вказаного року\n"
+    				+ "4 - Відсортувати книги за видавництвами\n"
+    				+ "5 - Вихід\n");
+            s = scan.next();
+                        
+            try {
+                selector = Integer.parseInt(s);
+            }
+            catch (NumberFormatException e) {
+                System.out.println("Помилка вводу");
+            }
+            
+            switch (selector) {
+            	case 0:
+                	try (Scanner file_sc = new Scanner(new File("data.txt"))) {
+                		while (file_sc.hasNext()) {
+                			String fin = file_sc.nextLine();
+                			Book b1 = gson.fromJson(fin, Book.class);
+                			books.add(b1);
+                		}
+                	}
+                	catch(IOException ex) {
+                        System.out.println(ex.getMessage());
+                    }
+                	break;
+                case 1:
+                	Book b2 = new Book("BookName", "Author", "Edition", 1999, 256, 99);
+                	System.out.println(gson.toJson(b2));
+                    // вызов метода 1
+                    break;
+                case 2:
+                    // вызов метода 2
+                    break;
+                case 3:
+                    // вызов метода 3
+                	break;
+                case 4:
+                	EditionComparator ed_comp = new EditionComparator();
+                	books.sort(ed_comp);
+                	for(Book b : books) {
+                		System.out.println(b.toString());
+                	}
+            }
+        }
+        System.out.println("Виконнання програми завершено.");
+        scan.close();
+    }
+}

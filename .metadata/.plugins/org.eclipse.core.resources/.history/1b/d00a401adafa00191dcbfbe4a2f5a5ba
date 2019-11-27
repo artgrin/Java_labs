@@ -1,0 +1,47 @@
+package lab3;
+
+public class Book {
+	
+	private String name, author, edition;
+	private int year, pages;
+	private float cost;
+	
+	Book(String name, String author, String edition, int year, int pages, float cost){
+		
+		this.name = name;
+		this.author = author;
+		this.edition = edition;
+		this.year = year;
+		this.pages = pages;
+		this.cost = cost;		
+	}
+	
+	public String GetName() {
+		return this.name;
+	}
+	
+	public String GetAuthor() {
+		return this.author;
+	}
+	
+	public String GetEdition() {
+		return this.edition;
+	}
+	
+	public int GetYear() {
+		return this.year;
+	}
+	
+	public int GetPages() {
+		return this.pages;
+	}
+	
+	public float GetCost() {
+		return this.cost;
+	}
+	
+	public void SetName(String name) {
+		this.name = name;
+	}
+
+}

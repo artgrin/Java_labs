@@ -1,0 +1,20 @@
+package lab3;
+
+//import java.util.ArrayList;
+import java.util.Scanner;
+//import com.google.gson.*;
+
+public class Program {
+	public static void main(String[] args) {
+        
+		Scanner sc = new Scanner(System.in);
+	    System.out.println("Введите число:");
+
+	    try{int number = sc.nextInt();}
+	    finally{};
+
+	    System.out.println("Спасибо! Вы ввели число " + number);
+
+	    sc.close();//вот теперь мы сделали все правильно!
+    }
+}

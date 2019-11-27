@@ -1,0 +1,12 @@
+package lab3;
+
+import java.util.ArrayList;
+
+public class Program {
+	public static void main(String[] args) {
+        
+        ArrayList<Book> books = new ArrayList<>();
+        books.add(new Book());
+        System.out.println(books.get(0).GetName());
+    }
+}

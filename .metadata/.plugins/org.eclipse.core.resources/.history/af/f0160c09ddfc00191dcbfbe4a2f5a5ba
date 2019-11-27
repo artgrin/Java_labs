@@ -1,0 +1,34 @@
+package lab3;
+
+import java.util.InputMismatchException;
+//import java.util.ArrayList;
+import java.util.Scanner;
+//import com.google.gson.*;
+
+public class Program {
+	public static void main(String[] args) {
+        
+		Scanner sc = new Scanner(System.in);
+		int number = 0;
+		System.out.print("0 - Прочитати список книг із файла\n"
+				+ "1 - Отримати список книг зазначеного автора\n"
+				+ "2 - Отримати список книг, які видані зазначеним видавництвом\n"
+				+ "3 - Отримати список книг, виданих пізніше вказаного року\n"
+				+ "4 - Відсортувати книги за видавництвами\n");
+		
+	    System.out.println("Введіть число:");
+	    try {
+	    	number = sc.nextInt();
+	    }
+	    catch(InputMismatchException e) {
+	    	System.out.println("Это не число");
+	    }
+	    finally {
+		    System.out.println("Спасибо! Вы ввели число " + number);
+	    };
+
+
+
+	    sc.close();//вот теперь мы сделали все правильно!
+    }
+}

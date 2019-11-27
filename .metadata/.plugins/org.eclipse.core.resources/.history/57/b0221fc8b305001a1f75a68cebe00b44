@@ -1,0 +1,43 @@
+package lab3;
+
+import java.util.Scanner;
+ 
+public class Program {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int x = 0;
+        String s ="";
+ 
+        while (!"5".equals(s)) {
+        	System.out.print("0 - Прочитати список книг із файла\n"
+    				+ "1 - Отримати список книг зазначеного автора\n"
+    				+ "2 - Отримати список книг, які видані зазначеним видавництвом\n"
+    				+ "3 - Отримати список книг, виданих пізніше вказаного року\n"
+    				+ "4 - Відсортувати книги за видавництвами\n"
+    				+ "5 - Вихід\n");
+            s = scan.next();
+                        
+            try {
+                x = Integer.parseInt(s);
+            } catch (NumberFormatException e) {
+                System.out.println("Неверный ввод");
+            }
+            
+            switch (x) {
+                case 1:
+                    // вызов метода 1
+                    break;
+                case 2:
+                    // вызов метода 2
+                    break;
+                case 3:
+                    // вызов метода 3
+                	break;
+                case 4:
+                	// вызов метода 4
+            }
+        }
+        System.out.println("Виконнання програми завершено.");
+        scan.close();
+    }
+}

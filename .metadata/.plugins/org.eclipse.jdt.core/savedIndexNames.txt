@@ -1,0 +1,23 @@
+INDEX VERSION 1.131+C:\Users\artgr\eclipse-workspace\.metadata\.plugins\org.eclipse.jdt.core
+883253955.index
+1007340512.index
+495980562.index
+641773782.index
+3580456661.index
+3723526095.index
+2850443106.index
+2701887696.index
+252399956.index
+3946796104.index
+290310802.index
+2835410444.index
+2768476762.index
+4234235848.index
+652710952.index
+2587302731.index
+2725142083.index
+3261525442.index
+2829819131.index
+533223114.index
+365488383.index
+1721912268.index

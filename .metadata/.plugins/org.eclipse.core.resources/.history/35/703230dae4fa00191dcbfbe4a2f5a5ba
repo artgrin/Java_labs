@@ -1,0 +1,86 @@
+package lab3;
+
+import java.util.Comparator;
+
+public class Book implements Comparator<Book> {
+	
+	private String name, author, edition;
+	private int year, pages;
+	private float cost;
+	
+	Book(String name, String author, String edition, int year, int pages, float cost){
+		SetAll(name, author, edition, year, pages, cost);
+	}
+	
+	Book(){
+		SetAll("NewBook", "Unknown", "Unknown", 0, 0, 0);
+	}
+	
+	public String GetName() {
+		return this.name;
+	}
+	
+	public String GetAuthor() {
+		return this.author;
+	}
+	
+	public String GetEdition() {
+		return this.edition;
+	}
+	
+	public int GetYear() {
+		return this.year;
+	}
+	
+	public int GetPages() {
+		return this.pages;
+	}
+	
+	public float GetCost() {
+		return this.cost;
+	}
+	
+	public void SetName(String name) {
+		this.name = name;
+	}
+	
+	public void SetAuthor(String author) {
+		this.author = author;
+	}
+	
+	public void SetEdition(String edition) {
+		this.edition = edition;
+	}
+	
+	public void SetYear(int year) {
+		this.year = year;
+	}
+	
+	public void SetPages(int pages) {
+		this.pages = pages;
+	}
+	
+	public void SetCost(float cost) {
+		this.cost = cost;
+	}
+	
+	public void SetAll(String name, String author, String edition, int year, int pages, float cost)
+	{
+		this.name = name;
+		this.author = author;
+		this.edition = edition;
+		this.year = year;
+		this.pages = pages;
+		this.cost = cost;	
+	}
+	
+	public int compareTo(Book other) {
+		return this.edition.compareTo(other.GetEdition());
+	}
+
+	@Override
+	public int compare(Book b1, Book b2) {
+		return b1.GetEdition().compareTo(b2.GetEdition());
+	}
+
+}

@@ -1,0 +1,23 @@
+
+
+import Animal.Eagle;
+import Animal.Giraffe;
+import Animal.Lion;
+
+public class Program {
+	
+	public static void main(String[] args) throws Exception {
+	    Zoo zoo = new Zoo();
+
+	    Cage<Eagle> eagleCage = new Cage<>(2);
+        eagleCage.addAnimal(new Eagle());
+
+	    zoo.addCage(eagleCage);
+	    zoo.addCage(new Cage<Lion>(1));
+	    zoo.addCage(new Cage<Giraffe>(1));
+
+	    System.out.println("Тварин в зоопарку: " + zoo.getCountOfAnimals());
+	    System.out.println("Тварин в клiтцi для орлiв: " + eagleCage.busyCount() + "/" + eagleCage.maxCount());
+    }
+
+}
