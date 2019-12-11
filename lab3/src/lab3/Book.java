@@ -75,7 +75,7 @@ public class Book implements Comparable<Book>{
 	@Override
 	public String toString()
 	{
-		return this.name + ", Авт: " + this.author + ", Вид.: " + this.edition + ", Рік: " + String.valueOf(this.year) + ", Стор.: " + String.valueOf(this.pages) + ", Ціна: " + String.valueOf(this.cost);
+		return this.name + ", Авт: " + this.author + ", Вид.: " + this.edition + ", Рік: " + String.valueOf(this.year) + ", Стор.: " + String.valueOf(this.pages) + ", Ціна: " + String.valueOf(this.cost); 
 	}
 	
 	@Override
