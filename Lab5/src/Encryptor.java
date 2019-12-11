@@ -7,16 +7,9 @@ public class Encryptor extends FilterReader {
 
     public String decrypt(String str, char c) throws IOException {
         String result = "";
-//        char symbol;
-//        while (true) {
-//            symbol = (char) super.read();
-//            if (symbol != '\uFFFF')
         for(int i = 0; i < str.length(); i++) {
                 result += (char) (str.charAt(i) - c);
-//            else
-//                break;
         }
-//        super.close();
         return result;
     }
 }

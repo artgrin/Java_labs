@@ -18,7 +18,7 @@ public class URL {
         try{
             html = Jsoup.connect(url).get();
         } catch (Exception e){
-            System.out.println("Failed to connect to " + url);
+            System.out.println("Не удалось подключиться к " + url);
             System.exit(1);
         }
     }
@@ -27,7 +27,7 @@ public class URL {
         try{
             html = Jsoup.connect(url).get();
         } catch (Exception e){
-            System.out.println("Failed to connect to " + url);
+            System.out.println("Не удалось подключиться к " + url);
             System.exit(1);
         }
     }
@@ -52,12 +52,12 @@ public class URL {
     public static void main(String[] args) {
         URL u1 = new URL();
         Map<String, Integer> frequencyOfTags = u1.countTags();
-        System.out.println("Sorted by lexicographical oder:");
+        System.out.println("Сортировка по лексикографическому порядку:");
         frequencyOfTags.entrySet().stream()
                 .sorted(Map.Entry.comparingByKey())
                 .forEach(System.out::println);
         System.out.println();
-        System.out.println("Sorted by frequency:");
+        System.out.println("Сортировка по частоте:");
         frequencyOfTags.entrySet().stream()
                 .sorted(Map.Entry.comparingByValue())
                 .forEach(System.out::println);
